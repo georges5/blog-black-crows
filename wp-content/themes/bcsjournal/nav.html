@@ -1,0 +1,112 @@
+<?php
+require('./wp-blog-header.php');
+include $_SERVER['DOCUMENT_ROOT']."/wp-content/themes/bcangular/header.php";
+?>
+
+<div class="header">
+    <div class="logo">
+      <a ui-sref="mainSection">
+        <img ng-src="../assets/images/blackcrows_logo.png" alt="Black Crows Logo">
+      </a>
+    </div>
+    <nav class="main-nav">
+      <ul class="unordered-list--main">
+        <li class="list-item--dropdown">shop
+          <div class="dark-container--dropdown">
+            <div class="container">
+              <p>view all shop items ></p>
+            </div>
+            <div class="container--horizontal">
+              <div class="container--vertical--full-width">
+                <h1>men</h1>
+                <div class="container--horizontal">
+                  <div class="container--vertical--full-width">
+                    <ul class="unordered-list">
+                      <li class="list-item--header">apparel</li>
+                      <li class="list-item--sub">jackets</li>
+                      <li class="list-item--sub">pants</li>
+                      <li class="list-item--sub">gloves</li>
+                    </ul>
+                  </div>
+                  <div class="container--vertical--full-width">
+                    <ul class="unordered-list">
+                      <li class="list-item--header">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'men-skis' })">skis</a>
+                      </li>
+                      <li class="list-item--sub">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'men-big-mountain' })">big mountain</a>
+                      </li>
+                      <li class="list-item--sub">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'men-all-terrain' })">all terrain</a>
+                      </li>
+                      <li class="list-item--sub">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'men-mountain-touring' })">touring</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="container--vertical--full-width">
+                    <ul class="unordered-list">
+                      <li class="list-item--header">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'men-poles' })">poles</a>
+                      </li>
+                      <li class="list-item--sub">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'men-poles' })">all poles</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="container--spacer">
+              </div>
+              <div class="container--vertical--full-width">
+                <h1>women</h1>
+                <div class="container--horizontal">
+                  <div class="container--vertical--full-width">
+                    <ul class="unordered-list">
+                      <li class="list-item--header">apparel</li>
+                      <li class="list-item--sub">jackets</li>
+                      <li class="list-item--sub">pants</li>
+                      <li class="list-item--sub">gloves</li>
+                    </ul>
+                  </div>
+                  <div class="container--vertical--full-width">
+                    <ul class="unordered-list">
+                      <li class="list-item--header">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'women-skis' })">skis</a>
+                      </li>
+                      <li class="list-item--sub">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'women-big-mountain' })">big mountain</a>
+                      </li>
+                      <li class="list-item--sub">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'women-all-terrain' })">all terrain</a>
+                      </li>
+                      <li class="list-item--sub">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'women-mountain-touring' })">touring</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="container--vertical--full-width">
+                    <ul class="unordered-list">
+                      <li class="list-item--header">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'women-poles' })">poles</a>
+                      </li>
+                      <li class="list-item--sub">
+                        <a ui-sref="categorySection({ parentCategorySlug: 'women-poles' })">all poles</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="list-item">journal</li>
+        <li class="list-item--dropdown">about us</li>
+        <li class="list-item">shop finder</li>
+      </ul>
+    </nav>
+    <div class="tools">
+      <blcr-cart-icon>
+      </blcr-cart-icon>
+    </div>
+</div>
