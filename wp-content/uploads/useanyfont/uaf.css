@@ -1,34 +1,34 @@
-			@font-face {
-				font-family: 'bc bold';
-				font-style: normal;
-				src: url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124823bc-bold.eot');
-				src: local('bc bold'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124823bc-bold.eot') format('embedded-opentype'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124823bc-bold.woff') format('woff');
-			}
-					@font-face {
-				font-family: 'bc regular';
-				font-style: normal;
-				src: url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124845bc-regular.eot');
-				src: local('bc regular'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124845bc-regular.eot') format('embedded-opentype'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124845bc-regular.woff') format('woff');
-			}
-					@font-face {
-				font-family: 'bc bold italic';
-				font-style: normal;
-				src: url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124904bc-bold-italic.eot');
-				src: local('bc bold italic'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124904bc-bold-italic.eot') format('embedded-opentype'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124904bc-bold-italic.woff') format('woff');
-			}
-					@font-face {
-				font-family: 'bc italic';
-				font-style: normal;
-				src: url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124921bc-italic.eot');
-				src: local('bc italic'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124921bc-italic.eot') format('embedded-opentype'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124921bc-italic.woff') format('woff');
-			}
-						body{
-					font-family: 'bc regular' !important;
-				}
-						h1, h2, h3, h4, h5, h6{
-					font-family: 'bc bold' !important;
-				}
-						p{
-					font-family: 'bc regular' !important;
-				}
+			@font-face {
+				font-family: 'bc bold';
+				font-style: normal;
+				src: url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124823bc-bold.eot');
+				src: local('bc bold'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124823bc-bold.eot') format('embedded-opentype'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124823bc-bold.woff') format('woff');
+			}
+					@font-face {
+				font-family: 'bc regular';
+				font-style: normal;
+				src: url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124845bc-regular.eot');
+				src: local('bc regular'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124845bc-regular.eot') format('embedded-opentype'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124845bc-regular.woff') format('woff');
+			}
+					@font-face {
+				font-family: 'bc bold italic';
+				font-style: normal;
+				src: url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124904bc-bold-italic.eot');
+				src: local('bc bold italic'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124904bc-bold-italic.eot') format('embedded-opentype'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124904bc-bold-italic.woff') format('woff');
+			}
+					@font-face {
+				font-family: 'bc italic';
+				font-style: normal;
+				src: url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124921bc-italic.eot');
+				src: local('bc italic'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124921bc-italic.eot') format('embedded-opentype'), url('//blog.black-crows.com/wp-content/uploads/useanyfont/150907124921bc-italic.woff') format('woff');
+			}
+						body{
+					font-family: 'bc regular' !important;
+				}
+						h1, h2, h3, h4, h5, h6{
+					font-family: 'bc bold' !important;
+				}
+						p{
+					font-family: 'bc regular' !important;
+				}
 		

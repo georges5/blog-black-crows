@@ -17,11 +17,9 @@
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+	<?php twentysixteen_excerpt(); ?>
 
-	<?php if ( 'post' == get_post_type() ) : ?>
+	<?php if ( 'post' === get_post_type() ) : ?>
 
 		<footer class="entry-footer">
 			<?php twentysixteen_entry_meta(); ?>
@@ -29,7 +27,7 @@
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'twentysixteen' ),
+						__( 'Edit %s', 'twentysixteen' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',
@@ -44,7 +42,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'twentysixteen' ),
+					__( 'Edit %s', 'twentysixteen' ),
 					the_title( '<span class="screen-reader-text">', '</span>', false )
 				),
 				'<footer class="entry-footer"><span class="edit-link">',

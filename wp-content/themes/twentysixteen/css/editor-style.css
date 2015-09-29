@@ -76,8 +76,8 @@ h6 {
 }
 
 h4 {
-	text-transform: uppercase;
 	letter-spacing: 0.13333em;
+	text-transform: uppercase;
 }
 
 h6 {
@@ -111,7 +111,7 @@ i {
 
 blockquote {
 	border-left: 4px solid #1a1a1a;
-	color: #757575;
+	color: #686868;
 	font-size: 19px;
 	font-style: italic;
 	line-height: 1.4736842105;
@@ -147,9 +147,8 @@ blockquote b {
 
 blockquote.alignleft,
 blockquote.alignright {
-	border-color: #1a1a1a;
-	border-style: solid;
-	border-width: 4px 0 0 0;
+	border: 0 solid #1a1a1a;
+	border-top-width: 4px;
 	padding: 18px 0 0;
 	width: -webkit-calc(50% - 14px);
 	width: calc(50% - 14px);
@@ -170,7 +169,7 @@ pre {
 }
 
 pre {
-	border: 1px solid #e8e8e8;
+	border: 1px solid #d1d1d1;
 	font-size: 16px;
 	line-height: 1.3125;
 	margin: 0 0 28px;
@@ -183,12 +182,12 @@ pre {
 }
 
 code {
-	background-color: #e8e8e8;
+	background-color: #d1d1d1;
 	padding: 2px 4px;
 }
 
 abbr[title] {
-	border-bottom: 1px dotted #e8e8e8;
+	border-bottom: 1px dotted #d1d1d1;
 	cursor: help;
 }
 
@@ -229,7 +228,7 @@ big {
  */
 
 hr {
-	background-color: #e8e8e8;
+	background-color: #d1d1d1;
 	border: 0;
 	height: 1px;
 	margin-bottom: 28px;
@@ -282,7 +281,7 @@ td,
 .mce-item-table,
 .mce-item-table th,
 .mce-item-table td {
-	border: 1px solid #e8e8e8;
+	border: 1px solid #d1d1d1;
 }
 
 table a {
@@ -408,20 +407,26 @@ a {
  * 6.0 Galleries
  */
 
-.gallery-item {
+.gallery {
+	margin: 0 -1.1666667%;
+	padding: 0;
+}
+
+.gallery .gallery-item {
 	display: inline-block;
-	padding: 0 2.3333333% 2.3333333%;
+	padding: 0 1.1400652% 2.2801304%;
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
+	max-width: 33.33%;
+}
+
+.gallery-columns-1 .gallery-item {
+	max-width: 100%;
 }
 
 .gallery-columns-2 .gallery-item {
 	max-width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
 }
 
 .gallery-columns-4 .gallery-item {
@@ -449,10 +454,11 @@ a {
 }
 
 .gallery .gallery-caption {
-	color: #757575;
+	color: #686868;
 	display: block;
 	font-size: 13px;
 	line-height: 1.6153846154;
+	margin: 0;
 	padding: 7px 0;
 }
 
@@ -491,16 +497,16 @@ body.rtl {
 }
 
 .rtl blockquote {
-	border-left: none;
 	border-right: 4px solid currentColor;
+	border-left: none;
 	margin: 0 0 28px 0;
-	padding-left: 0;
 	padding-right: 21px;
+	padding-left: 0;
 }
 
 .rtl blockquote > blockquote {
-	margin-left: auto;
 	margin-right: 0;
+	margin-left: auto;
 }
 
 .rtl ul,

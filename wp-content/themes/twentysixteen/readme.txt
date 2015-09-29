@@ -1,7 +1,7 @@
 === Twenty Sixteen ===
 Contributors: the WordPress team
-Requires at least: WordPress 4.2
-Tested up to: WordPress 4.3-trunk
+Requires at least: WordPress 4.3
+Tested up to: WordPress 4.4-trunk
 Version: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -51,3 +51,7 @@ Source: https://github.com/aFarkas/html5shiv
 Genericons icon font, Copyright 2013-2015 Automattic.com
 License: GNU GPL, Version 2 (or later)
 Source: http://www.genericons.com
+
+== Notes ==
+
+Only the default and dark color schemes are accessibility ready.

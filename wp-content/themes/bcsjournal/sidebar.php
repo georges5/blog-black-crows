@@ -7,5 +7,3 @@
  * @since Twenty Sixteen 1.0
  */
 ?>
-
-

@@ -22,48 +22,44 @@
 <div id="page" class="hfeed site">
 	<div class="site-inner">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'twentysixteen' ); ?></a>
-<div class="headernavi">  
 
+	<header id="masthead" class="site-header" role="banner">
+			<div class="site-header-main">
+				<div class="site-branding">	
+		
+		<div class="headernavi">
 <?php if ( is_front_page() && is_home() ) : ?>
     <div class="logo" style="float: left;">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://blog.black-crows.com/wp-content/uploads/2015/09/blackcrows_logo.png" title="<?php bloginfo( 'name' ); ?>"></a>
     </div>  
-<div class="headernavi">  	
+<div class="headernavi">
       <ul class="navul">
         <li class="navli"><a href="http://store-blackcrows.herokuapp.com/" class="navli">shop</a></li>
         <li class="navli"><a href="/" class="navli">journal</a></li>
         <li class="navli"><a href="#" class="navli">about us</a></li>
          <li class="navli"><a href="#" class="navli">shop finder</a></li>
-      </ul>    
+      </ul>
 </div>
 <?php else : ?>
  <div class="logo" style="float: left;">
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://blog.black-crows.com/wp-content/uploads/2015/09/blackcrows_logo.png" title="<?php bloginfo( 'name' ); ?>"></a>
-  </div>
-<div class="headernavi">  	
+</div>
+<div class="headernavi">
       <ul class="navul">
         <li class="navli"><a href="http://store-blackcrows.herokuapp.com/" class="navli">shop</a></li>
         <li class="navli"><a href="/" class="navli">journal</a></li>
         <li class="navli"><a href="#" class="navli">about us</a></li>
          <li class="navli"><a href="#" class="navli">shop finder</a></li>
-      </ul>    
-</div>
-					<?php endif;
+      </ul>
+	  </div>
 
+					<?php endif;
 
 					$description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) : ?>
 						<p class="site-description"><?php echo $description; ?></p>
 					<?php endif; ?>
-
-
-
-		
-
-    
-
 				</div><!-- .site-branding -->
-
 
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
 					<button id="menu-toggle" class="menu-toggle"><?php esc_html_e( 'Menu', 'twentysixteen' ); ?></button>
