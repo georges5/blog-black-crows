@@ -4,10 +4,10 @@ Theme URI: https://wordpress.org/themes/twentysixteen/
 Author: the WordPress team
 Author URI: https://wordpress.org/
 Description: Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere.
-Version: 0.1.20150928
+Version: 0.1.20151023
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, blue, gray, green, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, sticky-post, threaded-comments, translation-ready
+Tags: black, blue, gray, green, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 Text Domain: twentysixteen
 
 This theme, like WordPress, is licensed under the GPL.
@@ -147,6 +147,8 @@ figure {
 }
 
 hr {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
 
@@ -204,6 +206,8 @@ input::-moz-focus-inner {
 
 input[type="checkbox"],
 input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin-right: 0.4375em;
 	padding: 0;
@@ -302,11 +306,9 @@ h4,
 h5,
 h6 {
 	clear: both;
-	-webkit-font-variant-ligatures: common-ligatures;
-	font-variant-ligatures: common-ligatures;
-	text-rendering: optimizeLegibility;
 	font-weight: 700;
 	margin: 0;
+	text-rendering: optimizeLegibility;
 }
 
 p {
@@ -434,6 +436,8 @@ big {
  */
 
 html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -441,6 +445,8 @@ html {
 *:before,
 *:after {
 	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 }
 
@@ -617,8 +623,11 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="tel"],
+input[type="number"],
 textarea {
-	background: #f7f7f7 -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+	background: #f7f7f7;
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 	border: 1px solid #d1d1d1;
 	border-radius: 2px;
 	color: #686868;
@@ -631,6 +640,8 @@ input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
 textarea:focus {
 	background-color: #fff;
 	border-color: #007acc;
@@ -667,7 +678,9 @@ textarea:focus {
 }
 
 input[type="search"].search-field {
-	padding-right: 49px;
+	border-radius: 2px 0 0 2px;
+	width: -webkit-calc(100% - 42px);
+	width: calc(100% - 42px);
 }
 
 .search-submit:before {
@@ -676,7 +689,7 @@ input[type="search"].search-field {
 	left: 2px;
 	line-height: 42px;
 	position: relative;
-	width: 42px;
+	width: 40px;
 }
 
 .search-submit {
@@ -839,7 +852,8 @@ a:active {
 }
 
 .dropdown-toggle:after {
-	border-left: 1px solid #d1d1d1;
+	border: 0 solid #d1d1d1;
+	border-left-width: 1px;
 	content: "\f431";
 	font-size: 24px;
 	left: 1px;
@@ -1049,8 +1063,6 @@ a:active {
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
-	-webkit-font-variant-ligatures: common-ligatures;
-	font-variant-ligatures: common-ligatures;
 	font-weight: 700;
 	line-height: 1.2173913043;
 	text-rendering: optimizeLegibility;
@@ -1663,6 +1675,9 @@ blockquote:after,
 
 .post-thumbnail img {
 	display: block;
+}
+
+.no-sidebar .post-thumbnail img {
 	margin: 0 auto;
 }
 
@@ -2428,7 +2443,7 @@ p > video {
 	margin-bottom: 1.75em;
 }
 
-.wp-playlist.wp-playlist {
+.wp-playlist.wp-audio-playlist {
 	padding-bottom: 0;
 }
 
@@ -2480,11 +2495,11 @@ p > video {
 
 .gallery-item {
 	display: inline-block;
+	max-width: 33.33%;
 	padding: 0 1.1400652% 2.2801304%;
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
-	max-width: 33.33%;
 }
 
 .gallery-columns-1 .gallery-item {
@@ -2943,7 +2958,6 @@ p > video {
 	}
 
 	.main-navigation ul ul ul {
-		left: -999em;
 		top: -1px;
 	}
 
@@ -2958,14 +2972,9 @@ p > video {
 		border-bottom-width: 0;
 	}
 
-	.main-navigation ul ul li:hover > ul,
-	.main-navigation ul ul li.focus > ul {
-		left: 100%;
-	}
-
 	.main-navigation ul ul a {
 		white-space: normal;
-		width: 15em;
+		width: 12.6875em;
 	}
 
 	.main-navigation ul ul:before,
@@ -2978,20 +2987,27 @@ p > video {
 	.main-navigation ul ul:before {
 		border-color: #d1d1d1 transparent;
 		border-width: 0 10px 10px;
-		left: 7px;
+		right: 9px;
 		top: -9px;
 	}
 
 	.main-navigation ul ul:after {
 		border-color: #fff transparent;
 		border-width: 0 8px 8px;
-		left: 9px;
+		right: 11px;
 		top: -7px;
 	}
 
 	.main-navigation li:hover > ul,
 	.main-navigation li.focus > ul {
 		left: auto;
+		right: 0;
+	}
+
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
+		left: auto;
+		right: 100%;
 	}
 
 	.main-navigation .menu-item-has-children > a {
@@ -3012,11 +3028,11 @@ p > video {
 
 	.main-navigation ul ul .menu-item-has-children > a:after {
 		right: 0.5625em;
-		top: 0.8125em;
-		-webkit-transform: rotate(-90deg);
-		-moz-transform: rotate(-90deg);
-		-ms-transform: rotate(-90deg);
-		transform: rotate(-90deg);
+		top: 0.875em;
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
 	}
 
 	.dropdown-toggle,
@@ -3143,6 +3159,8 @@ p > video {
 	.widget input[type="url"],
 	.widget input[type="password"],
 	.widget input[type="search"],
+	.widget input[type="tel"],
+	.widget input[type="number"],
 	.widget textarea {
 		padding: 0.4615384615em 0.5384615385em;
 	}
@@ -3200,14 +3218,15 @@ p > video {
 	}
 
 	.widget input[type="search"].search-field {
-		padding-right: 42px;
+		width: -webkit-calc(100% - 35px);
+		width: calc(100% - 35px);
 	}
 
 	.widget .search-submit:before {
 		font-size: 16px;
 		left: 1px;
 		line-height: 35px;
-		width: 35px;
+		width: 34px;
 	}
 
 	.widget button.search-submit {
@@ -3282,6 +3301,7 @@ p > video {
 
 	.no-sidebar .content-area {
 		float: none;
+		margin: 0;
 		width: 100%;
 	}
 
@@ -3298,11 +3318,6 @@ p > video {
 	.no-sidebar .content-bottom-widgets {
 		margin-right: 15%;
 		margin-left: 15%;
-	}
-
-	.no-sidebar .post-thumbnail {
-		margin-right: 0;
-		margin-left: 0;
 	}
 
 	.widecolumn {
@@ -3465,14 +3480,14 @@ p > video {
 		width: 71.42857144%;
 	}
 
-	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.farleft {
+	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
 		margin-left: -40%;
 		width: -webkit-calc(60% - 1.4736842105em);
 		width: calc(60% - 1.4736842105em);
 	}
 
-	body:not(.search-results) article:not(.type-page) .size-big,
-	body:not(.search-results) article:not(.type-page) .caption-big {
+	body:not(.search-results) article:not(.type-page) img.below-entry-meta,
+	body:not(.search-results) article:not(.type-page) figure.below-entry-meta {
 		clear: both;
 		display: block;
 		float: none;
@@ -3481,9 +3496,9 @@ p > video {
 		max-width: 140%;
 	}
 
-	body:not(.search-results) article:not(.type-page) .caption-big .size-big,
-	body:not(.search-results) article:not(.type-page) table .caption-big,
-	body:not(.search-results) article:not(.type-page) table .size-big {
+	body:not(.search-results) article:not(.type-page) figure.below-entry-meta img.below-entry-meta,
+	body:not(.search-results) article:not(.type-page) table figure.below-entry-meta,
+	body:not(.search-results) article:not(.type-page) table img.below-entry-meta {
 		margin: 0;
 		max-width: 100%;
 	}
@@ -3869,9 +3884,8 @@ p > video {
 	.page-content,
 	.entry-content,
 	.entry-summary,
-	.post-thumbnail img,
-	.comments-area,
-	.post-thumbnail {
+	.post-thumbnail,
+	.comments-area {
 		margin-right: 0;
 		margin-left: 0;
 	}

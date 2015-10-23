@@ -30,28 +30,27 @@
 		<div class="headernavi">
 <?php if ( is_front_page() && is_home() ) : ?>
     <div class="logo" style="float: left;">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://blog.black-crows.com/wp-content/uploads/2015/09/blackcrows_logo.png" title="<?php bloginfo( 'name' ); ?>"></a>
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://blog.black-crows.com/wp-content/uploads/black-crows-logo.gif"  title="<?php bloginfo( 'name' ); ?>"></a>
     </div>  
-<div class="headernavi">
+<!--<div class="headernavi">
       <ul class="navul">
         <li class="navli"><a href="http://store-blackcrows.herokuapp.com/" class="navli">shop</a></li>
         <li class="navli"><a href="/" class="navli">journal</a></li>
         <li class="navli"><a href="#" class="navli">about us</a></li>
          <li class="navli"><a href="#" class="navli">shop finder</a></li>
       </ul>
-</div>
+</div>-->
 <?php else : ?>
  <div class="logo" style="float: left;">
-<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://blog.black-crows.com/wp-content/uploads/2015/09/blackcrows_logo.png" title="<?php bloginfo( 'name' ); ?>"></a>
-</div>
-<div class="headernavi">
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://blog.black-crows.com/wp-content/uploads/black-crows-logo.gif" title="<?php bloginfo( 'name' ); ?>"></a>
+</div><!--<div class="headernavi">
       <ul class="navul">
         <li class="navli"><a href="http://store-blackcrows.herokuapp.com/" class="navli">shop</a></li>
         <li class="navli"><a href="/" class="navli">journal</a></li>
         <li class="navli"><a href="#" class="navli">about us</a></li>
          <li class="navli"><a href="#" class="navli">shop finder</a></li>
       </ul>
-	  </div>
+	  </div>-->
 
 					<?php endif;
 
@@ -60,7 +59,7 @@
 						<p class="site-description"><?php echo $description; ?></p>
 					<?php endif; ?>
 				</div><!-- .site-branding -->
-
+<br clear="all"/>
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
 					<button id="menu-toggle" class="menu-toggle"><?php esc_html_e( 'Menu', 'twentysixteen' ); ?></button>
 				<?php endif; ?>
@@ -102,6 +101,10 @@
 					</a>
 				</div>
 			<?php endif; // End header image check. ?>
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar Widgets') ) : ?>
+<?php endif;?>
+
+
 		</header><!-- .site-header -->
 
 		<div id="content" class="site-content">

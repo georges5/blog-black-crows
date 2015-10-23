@@ -11,6 +11,27 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twentysixteen
 */
+
+
+
+h1 {
+text-transform: lowercase;
+}
+
+.site-header-menu {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#lang_choice_polylang-2 {
+text-transform: lowercase;
+font-size: 0.8rem;
+margin-top: 25px;
+background-color: red;background: #FFF url("http://blog.black-crows.com/wp-content/uploads/chevron-down.svg") no-repeat scroll 96% 60% / 1.5rem auto;
+border: 4px solid;
+border-radius: 0px;
+padding: 0.5rem 2rem 0.5rem 0.5rem;}
+
         .headernavi 
 {    background-color: #fff;    font-size: 0.8125rem;    font-weight: 600;    height: 80px;    line-height:  80px;    white-space: nowrap;    width: 100%;    }   
 
@@ -23,6 +44,17 @@
 .menu-toggle {
         float: right;
 }
+.menu-item {
+border-color: #fff;
+border-style: solid;
+border-width: 3px;
+font-size: 1rem;
+margin: 0.63rem;
+padding: 0.315rem;
+
+}
+
+
 
 
 .site {
@@ -43,11 +75,52 @@
 	max-width: 98%;
 	position: relative;
 }
+a {
+	color: #000;
+	text-decoration: none;
+ text-transform: lowercase;
+}
+a, a:link, a:visited, a:hover, a:active {
+  color: #000;
+}
+
 p {
 	margin-left: auto;
     margin-right: auto;
 	max-width: 100%;
-	}
+	font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.entry-title {
+font-weight: 500;
+font-size: 3 rem;
+margin-bottom: 0.3em;
+}
+
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, .entry-summary h1, .entry-summary h2, .entry-summary h3, .entry-summary h4, .entry-summary h5, .entry-summary h6, .comment-content h1, .comment-content h2, .comment-content h3, .comment-content h4, .comment-content h5, .comment-content h6, .textwidget h1, .textwidget h2, .textwidget h3, .textwidget h4, .textwidget h5, .textwidget h6 {
+    font-weight: 500;
+
+}
+
+
+.entry-content h3, .entry-summary h3, .comment-content h3, .textwidget h3 {
+    <!--font-size: 1.1875rem;
+    line-height: 1.10526;
+    margin-top: 2.94737em;
+    margin-bottom: 1.47368em;-->
+ font-size: 1.8rem;
+    line-height: 1.4;
+    margin: 0.63rem 0;
+    font-weight: bold;
+}
+   
+.entry-title h1 {
+    font-size: 3rem;
+    margin: 0.63rem 0;
+    font-weight: bold;
+}
 
 .site-content {
 		padding: 0;
@@ -89,7 +162,14 @@ display: inline!important;
 }
 .entry-footer {
 
+    margin-top: 2em!important;
 display: inline!important;
 }
+
+.site-main > article {
+    margin-bottom: 3.5em;
+}
+
+
 <!-- embed responsivly -->
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }

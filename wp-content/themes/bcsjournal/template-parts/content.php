@@ -31,7 +31,7 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				wp_kses( esc_html__( 'Continue reading %s', 'twentysixteen' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( esc_html__( '... >> %s', 'twentysixteen' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
@@ -45,19 +45,5 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-<footer class="entry-footer">
-		<?php twentysixteen_entry_meta(); ?>
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'twentysixteen' ),
-					the_title( '<span class="screen-reader-text">', '</span>', false )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer>
-	<!-- .entry-footer -->
+
 </article><!-- #post-## -->

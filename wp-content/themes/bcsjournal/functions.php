@@ -5,6 +5,17 @@ function theme_enqueue_styles() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/css/ie7.css' );
 
 }
+/* widget dans le header */
+if (function_exists('register_sidebar')) {
+register_sidebar(array(
+'name' => 'Sidebar Widgets',
+'id' => 'sidebar-widgets',
+'description' => 'Widget Area',
+'before_widget' => '<div id="one" class="two">',
+'after_widget' => '</div>',
+'before_title' => '<h2>',
+'after_title' => '</h2>'
+)); }
 
 /* Fonction pour masquer la barre d'administration aux utilisateurs*/
     function admin_bar($content) {
@@ -55,4 +66,27 @@ function twentysixteen_entry_meta() {
 		echo '</span>';
 	}
 }
+endif;
+
+
+if ( ! function_exists( 'twentysixteen_excerpt_more' ) && ! is_admin() ) :
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with ... and
+ * a 'Continue reading' link.
+ *
+ * Create your own twentysixteen_excerpt_more() function to override in a child theme.
+ *
+ * @since Twenty Sixteen 1.0
+ *
+ * @return string 'Continue reading' link prepended with an ellipsis.
+ */
+function twentysixteen_excerpt_more() {
+	$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
+		esc_url( get_permalink( get_the_ID() ) ),
+		/* translators: %s: Name of current post */
+		sprintf( __( 'more %s', 'twentysixteen' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+	);
+	return ' &hellip; ' . $link;
+}
+add_filter( 'excerpt_more', 'twentysixteen_excerpt_more' );
 endif;

@@ -25,10 +25,22 @@
 						body{
 					font-family: 'bc regular' !important;
 				}
+						p{
+					font-family: 'bc regular' !important;
+				}
 						h1, h2, h3, h4, h5, h6{
 					font-family: 'bc bold' !important;
 				}
-						p{
+						h3{
+					font-family: 'bc regular' !important;
+				}
+						h1{
+					font-family: 'bc regular' !important;
+				}
+						select{
+					font-family: 'bc regular' !important;
+				}
+						li{
 					font-family: 'bc regular' !important;
 				}
 		
